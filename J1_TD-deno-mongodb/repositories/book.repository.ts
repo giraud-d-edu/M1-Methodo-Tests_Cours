@@ -10,7 +10,7 @@ export const getAllBooks = async (): Promise<Book[]> => {
     return dbos.map(dbo => fromBookDboToBook(dbo));
 };
 
-export let getBookById = async (id: string): Promise<Book> => {
+export const getBookById = async (id: string): Promise<Book | null> => {
     const booksCollection = getBooksCollection();
     const objectId = new ObjectId(id);
     const dbo: BookDBO | undefined = await booksCollection.findOne({ _id: objectId });
@@ -22,13 +22,13 @@ export let getBookById = async (id: string): Promise<Book> => {
 
 export const createBook = async (
     bookCandidate: BookCandidate,
-): Promise<Book> => {
+): Promise<Book | null> => {
     const booksCollection = getBooksCollection();
     const insertId: ObjectId = await booksCollection.insertOne({ ...bookCandidate });
     return await getBookById(insertId.toString());
 };
 
-export const updateBook = async (updatedBookData: Book): Promise<Book> => {
+export const updateBook = async (updatedBookData: Book): Promise<Book | null> => {
     const booksCollection = getBooksCollection();
     const objectId = new ObjectId(updatedBookData.id);
     await booksCollection.updateOne({ _id: objectId }, {

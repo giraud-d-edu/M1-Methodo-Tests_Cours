@@ -5,15 +5,15 @@ export const getAllBooksService = async (): Promise<Book[]> => {
     return await bookRepository.getAllBooks();
 };
 
-export const getBookByIdService = async (id: string): Promise<Book> => {
+export const getBookByIdService = async (id: string): Promise<Book | null> => {
     return await bookRepository.getBookById(id);
 };
 
-export const createBookService = async (bookCandidate: BookCandidate): Promise<Book> => {
+export const createBookService = async (bookCandidate: BookCandidate): Promise<Book | null> => {
     return await bookRepository.createBook(bookCandidate);
 };
 
-export const updateBookService = async (book: Book, repo = bookRepository): Promise<Book> => {
+export const updateBookService = async (book: Book, repo = bookRepository): Promise<Book | null> => {
 
     // if (book.isbn.length !== 13) {
     //     throw new Error("ISBN must be 13 digits");

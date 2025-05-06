@@ -10,11 +10,6 @@
 
 ### Niveau simple
 
-    titre: string;
-    auteur: string;
-    isbn: string;
-    datePublication: string;
-
 Créer et tester les fonctionnalités suivantes uniquement pour la création de book :
 
 * Avoir un ISBN de 13 caractères
@@ -23,7 +18,6 @@ Créer et tester les fonctionnalités suivantes uniquement pour la création de 
 
 ### Niveau intermédiaire
 
-* Faites en sorte que votre mock de `bookRepository.updateBook` attribue un id au Book
 * Avoir un iSBN unique
 * Appliquer toutes les fonctionnalités précédentes pour la modification
 * Implémenter et tester le delete (je vous laisse choisir les règles fonctionnelles)
@@ -32,6 +26,6 @@ Créer et tester les fonctionnalités suivantes uniquement pour la création de 
 
 ### Niveau avancé
 
-* Implémenter des queryParam au GetAll et tester
 * Implémenter les méta data (de temps) "createdAt" et "updatedAt" sur le book et tester
-* 
+* Implémenter des queryParam au GetAll et tester
+* Modifier le type Book pour avoir des propriéts `firstName`, `lastName`, `nationality`, `birthDate`, `gender` pour l'auteur (PS : vous devez justifier vos choix de type)
