@@ -8,8 +8,6 @@
 
 ## Consignes
 
-Recommandation : Utiliser [Jest](https://deno.com/npm/package/jest)
-
 ### Niveau simple
 
     titre: string;
