@@ -14,8 +14,8 @@ Deno.test("updateBookService - Cas nominal", async () => {
         isbn: "1234567890123",
         datePublication: "2023-01-01",
     };
-    const updateBookMock = async (book: Book) => {
-        return book;
+    const updateBookMock = async (book: Book): Promise<Book> => {
+        return new Promise(resolve => resolve(book));
     };
     const mockRepository = { ...bookRepository, updateBook: updateBookMock };
 
