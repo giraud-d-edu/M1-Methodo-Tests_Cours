@@ -1,0 +1,39 @@
+# Consignes pour le J1 TP
+
+## Repo
+
+1. Créer un repo sur [Github Classroom](https://classroom.github.com/a/7I3gDwwO)
+2. Y copier coller le contenu de `J1-TP-deno-mongodb`
+3. Faire un premier commit avec le message `feat: Initial commit`
+
+## Consignes
+
+Recommandation : Utiliser [Jest](https://deno.com/npm/package/jest)
+
+### Niveau simple
+
+    titre: string;
+    auteur: string;
+    isbn: string;
+    datePublication: string;
+
+Créer et tester les fonctionnalités suivantes uniquement pour la création de book :
+
+* Avoir un ISBN de 13 caractères
+* Avoir un auteur d'un moins 3 caractères*
+* Avoir une date de publication au format YYYY-MM-DD
+
+### Niveau intermédiaire
+
+* Faites en sorte que votre mock de `bookRepository.updateBook` attribue un id au Book
+* Avoir un iSBN unique
+* Appliquer toutes les fonctionnalités précédentes pour la modification
+* Implémenter et tester le delete (je vous laisse choisir les règles fonctionnelles)
+* Implémenter et tester le getAll (je vous laisse choisir les règles fonctionnelles)
+* Implémenter et tester le getById (je vous laisse choisir les règles fonctionnelles)
+
+### Niveau avancé
+
+* Implémenter des queryParam au GetAll et tester
+* Implémenter les méta data (de temps) "createdAt" et "updatedAt" sur le book et tester
+* 

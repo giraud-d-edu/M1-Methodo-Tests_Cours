@@ -13,19 +13,17 @@ export const createBookService = async (bookCandidate: BookCandidate): Promise<B
     return await bookRepository.createBook(bookCandidate);
 };
 
-export const updateBookService = async (book: Book): Promise<Book> => {
+export const updateBookService = async (book: Book, repo = bookRepository): Promise<Book> => {
 
     // if (book.isbn.length !== 13) {
     //     throw new Error("ISBN must be 13 digits");
     // }
 
-    // Pour le mock
-    //
-    // const existingBook = await bookRepository.getBookById(book.id);
+    // const existingBook : Book | undefined = await bookRepository.getBookById(book.id);
     // if (!existingBook) {
     //     throw new Error(`Book with id ${book.id} not found`);
     // }
-    return await bookRepository.updateBook(book);
+    return await repo.updateBook(book);
 };
 
 export const deleteBookService = async (id: string): Promise<boolean> => {
