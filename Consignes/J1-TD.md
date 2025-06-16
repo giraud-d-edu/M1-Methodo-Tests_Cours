@@ -1,4 +1,4 @@
-# Consignes pour le J1 TP
+# Consignes pour le J1 TD
 
 ## Repo
 
@@ -29,3 +29,4 @@ Créer et tester les fonctionnalités suivantes uniquement pour la création de 
 * Implémenter les méta data (de temps) "createdAt" et "updatedAt" sur le book et tester
 * Implémenter des queryParam au GetAll et tester
 * Modifier le type Book pour avoir des propriéts `firstName`, `lastName`, `nationality`, `birthDate`, `gender` pour l'auteur (PS : vous devez justifier vos choix de type)
+
